@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400');
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* COLORS  */
+  /* primary */
+  --primary-0: #f0efff;
+  --primary-50: #d8d6ff;
+  --primary-100: #c1beff;
+  --primary-200: #aaa5ff;
+  --primary-300: #938dff;
+  --primary-400: #7b74ff;
+  /* main */
+  --primary-500: #645cff;
+  --primary-600: #554ed9;
+  --primary-700: #4640b3;
+  --primary-800: #37338c;
+  --primary-900: #282566;
+  --primary-1000: #191740;
+  --primary-1100: #0a0919;
+  /* grey */
+  --grey-0: #fafbfc;
+  --grey-50: #f2f4f8;
+  --grey-100: #eaedf3;
+  --grey-200: #e2e7ef;
+  --grey-300: #dbe0ea;
+  --grey-400: #d3dae6;
+  --grey-500: #cbd3e1;
+  --grey-600: #adb3bf;
+  --grey-700: #8e949e;
+  --grey-800: #70747c;
+  --grey-900: #51545a;
+  --grey-1000: #333538;
+  --grey-1100: #141516;
+
+  /* rest */
+  --black: #222;
+  --white: #fff;
+  --red-light: #f8d7da;
+  --red-dark: #842029;
+  --green-light: #d1e7dd;
+  --green-dark: #0f5132;
+
+  /* typography */
+  --headingFont: 'Inconsolata', monospace;
+  --bodyFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --smallText: 0.8em;
+  /* rest */
+  --backgroundColor: var(--white);
+  --textColor: var(--grey-1000);
+  --borderRadius: 0.5rem;
+  --letterSpacing: normal;
+  --transition: 0.2s ease-in-out all;
+  --max-width: 1120px;
+  --fixed-width: 600px;
+  /* box shadows */
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-2: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-3: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-4: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background: var(--backgroundColor);
+  color: var(--textColor);
+  font-family: var(--bodyFont);
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-family: var(--headingFont);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  max-width: 40em;
+  color: var(--grey-800);
+}
+
+small,
+.text-small {
+  font-size: var(--smallText);
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-500);
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary-600);
+}
+
+/*************
+     Buttons 
+*************/
+.btn {
+  cursor: pointer;
+  appearance: none;
+  color: var(--white);
+  background: var(--primary-500);
+  border: none;
+  border-radius: var(--borderRadius);
+  padding: 0.5rem 1rem;
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  background: var(--primary-600);
+  box-shadow: var(--shadow-2);
+}
+
+button.small {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+button.hipster {
+  color: var(--primary-500);
+  background: var(--primary-50);
+}
+
+button.hipster:hover {
+  background: var(--primary-100);
+}
+
+button.block {
+  width: 100%;
+}
+
+/*************
+     FORM 
+*************/
+form {
+  width: 100%;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-1);
+  padding: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--grey-800);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: var(--borderRadius);
+  background: var(--white);
+  border: 1px solid var(--grey-300);
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-500);
+  outline: none;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+textarea {
+  height: 6rem;
+}
+
+::placeholder {
+  color: var(--grey-600);
+}
+
+.form-alert {
+  color: var(--red-dark);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/*************
+     TASKS
+*************/
+.tasks-container {
+  width: 90vw;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.tasks {
+  display: grid;
+  gap: 1rem;
+}
+
+.single-task {
+  padding: 1rem;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-1);
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.single-task:hover {
+  box-shadow: var(--shadow-2);
+}
+
+.single-task h5 {
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.task-completed h5 {
+  text-decoration: line-through;
+  color: var(--grey-600);
+}
+
+.task-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.delete-btn,
+.edit-link {
+  background: transparent;
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  color: var(--grey-700);
+  transition: color 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+  color: var(--red-dark);
+}
+
+.edit-link:hover {
+  color: var(--green-dark);
+}
+
+/*************
+     Alerts
+*************/
+.alert {
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: var(--borderRadius);
+  font-size: 0.875rem;
+}
+
+.alert-success {
+  color: var(--green-dark);
+  background-color: var(--green-light);
+}
+
+.alert-danger {
+  color: var(--red-dark);
+  background-color: var(--red-light);
+}
+
+/*************
+     Loading
+*************/
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid var(--grey-300);
+  border-top-color: var(--primary-500);
+  animation: spinner 0.6s linear infinite;
+  margin: 0 auto;
+}
+
+/*************
+     Back Link
+*************/
+.back-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--primary-500);
+  color: var(--white);
+  border-radius: var(--borderRadius);
+  text-align: center;
+  margin-top: 2rem;
+  transition: var(--transition);
+}
+
+.back-link:hover {
+  background: var(--primary-600);
+}
